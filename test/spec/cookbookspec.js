@@ -3,19 +3,19 @@
 /* global inject */
 /* global describe */
 /* global beforeEach */
-describe('MainCtrl', function () {
-var mainCtrl, $scope;
-beforeEach(module('cookbook'));
-beforeEach(inject(function ($controller, $rootScope) {
-$scope = $rootScope.$new();
-$controller('MainCtrl', {
-$scope: $scope
-});
-}));
-it('should assign the correct rapper to scope', function () {
-expect($scope.emcee).toEqual('shiva Kumar Routhu');
-});
-});
+	describe('MainCtrl', function () {
+	var mainCtrl, $scope;
+	beforeEach(module('cookbook'));
+	beforeEach(inject(function ($controller, $rootScope) {
+		$scope = $rootScope.$new();
+		$controller('MainCtrl', {
+		$scope: $scope
+		});
+	}));
+	it('should assign the correct rapper to scope', function () {
+		expect($scope.emcee).toEqual('shiva Kumar Routhu');
+	});
+	});
 
 describe('testing a demo directive', function() {
 	var scope, element;
@@ -40,7 +40,7 @@ describe('dependeny testing', function() {
 	beforeEach(module(function($provide){
 		$provide.value('imageStore', {
 			thumbnailUrl: function(id) {
-				url = '/thumbs/' + id; 
+				url = '/thumbs/' + id;
 			}
 		});
 	}));
@@ -55,5 +55,3 @@ describe('dependeny testing', function() {
 		expect(url).toBe('/thumbs/1');
 	})
 });
-
-

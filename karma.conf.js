@@ -4,9 +4,10 @@ frameworks: ['jasmine'],
 files: [
 "lib/angular.js",
 "lib/angular-mocks.js",
-"src/cookbook.js",
+"lib/angular-route.js",
+
 "src/*.js",
-"test/cookbookSpec.js"
+"test/**/*.js"
 ],
 autoWatch: true,
 browsers: ['Chrome']
